@@ -4,7 +4,7 @@
    Any photo that is missing shows a pretty placeholder instead.
    ===================================================================== */
 const CONFIG = {
-  introTitle: "Happy Anniversary, Love !",
+  introTitle: "Thank You Love for Everything",
 
   // Background music. If this file doesn't exist yet, a soft music-box
   // melody is played instead so the site is never silent.
