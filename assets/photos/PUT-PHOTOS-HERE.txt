@@ -1,0 +1,8 @@
+Drop your photos in this folder with these names (or change the names in script.js -> CONFIG):
+
+  reveal.jpg     the big photo revealed after the flowers burst (landscape works best)
+  song1.jpg      stamp photo on the "Song for you" page
+  song2.jpg      second stamp photo
+  memory1.jpg ... memory6.jpg    the polaroids on the "Memories" page
+
+Background music goes one folder up:  assets/music.mp3

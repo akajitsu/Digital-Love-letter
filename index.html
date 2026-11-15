@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>For You ♥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Kaushan+Script&family=Marcellus&family=Gochi+Hand&family=Playfair+Display:wght@500;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== Reusable SVG drawings ========== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- honey-wax seal -->
+      <radialGradient id="gold" cx="38%" cy="32%" r="75%">
+        <stop offset="0" stop-color="#fff1b8"/>
+        <stop offset=".4" stop-color="#f2c241"/>
+        <stop offset=".8" stop-color="#cf8f12"/>
+        <stop offset="1" stop-color="#9c6407"/>
+      </radialGradient>
+      <radialGradient id="gold2" cx="60%" cy="65%" r="70%">
+        <stop offset="0" stop-color="#f9d76a"/>
+        <stop offset="1" stop-color="#d99d1c"/>
+      </radialGradient>
+      <linearGradient id="envCream" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fdf5dc"/>
+        <stop offset="1" stop-color="#e6d3a2"/>
+      </linearGradient>
+      <pattern id="ging" width="12" height="12" patternUnits="userSpaceOnUse">
+        <rect width="12" height="12" fill="#fffaf0"/>
+        <rect width="6" height="12" fill="#e5a812" opacity=".55"/>
+        <rect width="12" height="6" fill="#e5a812" opacity=".55"/>
+      </pattern>
+    </defs>
+
+    <!-- Peony: three rings of ruffled petals + a tight curled heart -->
+    <symbol id="peony" viewBox="-25 -25 50 50">
+      <g fill="currentColor" stroke="rgba(120,70,0,.22)" stroke-width=".7">
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(45)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(90)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(135)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(180)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(225)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(270)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(315)"/>
+      </g>
+      <circle r="15.5" fill="rgba(140,80,0,.16)"/>
+      <g fill="currentColor" stroke="rgba(120,70,0,.24)" stroke-width="1" transform="rotate(22.5) scale(.72)">
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(45)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(90)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(135)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(180)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(225)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(270)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(315)"/>
+      </g>
+      <circle r="10" fill="rgba(140,80,0,.18)"/>
+      <g fill="currentColor" stroke="rgba(120,70,0,.28)" stroke-width="1.5" transform="rotate(8) scale(.46)">
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(60)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(120)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(180)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(240)"/>
+        <path d="M0 1 C-9 -3 -12.5 -15 -8.5 -20.5 Q-5.8 -23.4 -3 -20.6 Q0 -24.6 3 -20.6 Q5.8 -23.4 8.5 -20.5 C12.5 -15 9 -3 0 1Z" transform="rotate(300)"/>
+      </g>
+      <path d="M-4.5 -1.5 Q-2.5 -6.5 2 -4.5 M-1 3.5 Q3.5 2 4.5 -2 M-5 2.5 Q-4 5.5 -.5 5.5 M-1.5 -1 Q0 -3 1.5 -1"
+            fill="none" stroke="rgba(120,65,0,.38)" stroke-width="1.1" stroke-linecap="round"/>
+      <g fill="rgba(255,255,255,.3)">
+        <ellipse cx="-8" cy="-15" rx="2.6" ry="5" transform="rotate(-30 -8 -15)"/>
+        <ellipse cx="12" cy="-9" rx="2" ry="4" transform="rotate(50 12 -9)"/>
+      </g>
+    </symbol>
+
+    <!-- Peony bud -->
+    <symbol id="peony-bud" viewBox="-15 -15 30 30">
+      <circle cy="-2" r="9" fill="currentColor" stroke="rgba(120,70,0,.25)" stroke-width=".8"/>
+      <path d="M-5 -4 Q0 -10 5 -4 M-3 0 Q0 -4 3 0" fill="none" stroke="rgba(120,70,0,.3)" stroke-width="1" stroke-linecap="round"/>
+      <ellipse cx="-3" cy="-6" rx="2" ry="3" fill="rgba(255,255,255,.3)"/>
+      <path d="M-9 1 Q-7 11 0 10 Q7 11 9 1 Q4 6 0 4.5 Q-4 6 -9 1Z" fill="#5f9b45"/>
+    </symbol>
+
+    <symbol id="blossom" viewBox="-25 -25 50 50">
+      <g fill="currentColor">
+        <ellipse cy="-12" rx="9" ry="13"/>
+        <ellipse cy="-12" rx="9" ry="13" transform="rotate(72)"/>
+        <ellipse cy="-12" rx="9" ry="13" transform="rotate(144)"/>
+        <ellipse cy="-12" rx="9" ry="13" transform="rotate(216)"/>
+        <ellipse cy="-12" rx="9" ry="13" transform="rotate(288)"/>
+      </g>
+      <g fill="rgba(255,255,255,.22)">
+        <ellipse cy="-14" rx="3" ry="7"/>
+        <ellipse cy="-14" rx="3" ry="7" transform="rotate(72)"/>
+        <ellipse cy="-14" rx="3" ry="7" transform="rotate(144)"/>
+        <ellipse cy="-14" rx="3" ry="7" transform="rotate(216)"/>
+        <ellipse cy="-14" rx="3" ry="7" transform="rotate(288)"/>
+      </g>
+      <circle r="6.5" fill="#ffd36e"/>
+      <circle r="3" fill="#f0a63a"/>
+    </symbol>
+
+    <symbol id="daisy" viewBox="-25 -25 50 50">
+      <g fill="currentColor" stroke="rgba(0,0,0,.08)" stroke-width=".6">
+        <ellipse cy="-13" rx="4.5" ry="10"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(30)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(60)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(90)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(120)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(150)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(180)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(210)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(240)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(270)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(300)"/>
+        <ellipse cy="-13" rx="4.5" ry="10" transform="rotate(330)"/>
+      </g>
+      <circle r="6" fill="#f6c343"/>
+    </symbol>
+
+    <symbol id="tulip" viewBox="-20 -24 40 48">
+      <path d="M-13 -6 Q-15 -22 -6 -19 L0 -11 L6 -19 Q15 -22 13 -6 Q11 12 0 12 Q-11 12 -13 -6Z" fill="currentColor"/>
+      <path d="M-4 -10 Q0 -22 4 -10 Q3 8 0 10 Q-3 8 -4 -10Z" fill="rgba(255,255,255,.25)"/>
+    </symbol>
+
+    <symbol id="leaf" viewBox="-25 -25 50 50">
+      <path d="M-20 18 Q-18 -16 20 -20 Q16 16 -20 18Z" fill="currentColor"/>
+      <path d="M-18 16 L16 -16" stroke="rgba(0,0,0,.2)" stroke-width="1.5"/>
+    </symbol>
+
+    <symbol id="star" viewBox="-28 -28 56 56">
+      <path d="M0 -22 L5.88 -8.09 L20.92 -6.8 L9.51 3.09 L12.93 17.8 L0 10 L-12.93 17.8 L-9.51 3.09 L-20.92 -6.8 L-5.88 -8.09Z"
+            fill="currentColor" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M0 -17 L4.6 -6.3 L16 -5.2 L7.4 2.4 L10 13.6 L0 7.8 L-10 13.6 L-7.4 2.4 L-16 -5.2 L-4.6 -6.3Z"
+            fill="none" stroke="rgba(255,255,255,.75)" stroke-width="1.1" stroke-dasharray="2.2 2" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Peony bouquet (Gifts page + Flowers page) -->
+    <symbol id="peony-bouquet" viewBox="0 0 200 250">
+      <!-- back of the paper wrap -->
+      <path d="M40 150 L100 238 L160 150 Q100 128 40 150Z" fill="#d9bf86"/>
+      <g stroke="#4f8f3c" stroke-width="4" stroke-linecap="round" fill="none">
+        <path d="M100 235 L100 190"/>
+        <path d="M100 195 Q80 140 60 95"/><path d="M100 195 Q92 130 85 70"/>
+        <path d="M100 195 Q108 120 118 60"/><path d="M100 195 Q122 140 145 90"/>
+        <path d="M100 195 Q72 160 48 140"/><path d="M100 195 Q130 165 155 140"/>
+        <path d="M100 195 Q100 140 102 110"/>
+      </g>
+      <use href="#leaf" x="18" y="128" width="40" height="40" style="color:#5a9c45"/>
+      <use href="#leaf" x="142" y="126" width="40" height="40" transform="scale(-1 1) translate(-324 0)" style="color:#4c8c3b"/>
+      <use href="#leaf" x="150" y="40" width="30" height="30" style="color:#62a84c"/>
+      <use href="#leaf" x="20" y="44" width="28" height="28" transform="scale(-1 1) translate(-68 0)" style="color:#62a84c"/>
+      <use href="#peony-bud" x="150" y="18" width="30" height="30" style="color:#f6cf52"/>
+      <use href="#peony-bud" x="22" y="22" width="28" height="28" style="color:#fbe39a"/>
+      <use href="#peony" x="12" y="96" width="58" height="58" style="color:#fbe7a1"/>
+      <use href="#peony" x="130" y="94" width="58" height="58" style="color:#f7d24a"/>
+      <use href="#peony" x="26" y="50" width="60" height="60" style="color:#f4c025"/>
+      <use href="#peony" x="114" y="46" width="60" height="60" style="color:#f9dc6e"/>
+      <use href="#peony" x="66" y="16" width="64" height="64" style="color:#fff1c4"/>
+      <use href="#peony" x="64" y="72" width="72" height="72" style="color:#f6c93a"/>
+      <use href="#peony" x="40" y="112" width="44" height="44" style="color:#f8b85c"/>
+      <use href="#peony" x="118" y="112" width="44" height="44" style="color:#fde9a8"/>
+      <!-- front of the paper wrap -->
+      <path d="M58 164 Q100 184 142 164 L110 238 Q100 242 90 238Z" fill="#ecd7a4" stroke="#c9a868" stroke-width="1.5"/>
+      <path d="M78 176 L96 236 M122 176 L104 236" stroke="rgba(160,120,50,.35)" stroke-width="1.5"/>
+      <!-- ribbon bow -->
+      <path d="M100 198 Q78 182 74 200 Q86 210 100 202 Q114 210 126 200 Q122 182 100 198Z" fill="#f2b705" stroke="#c98f00" stroke-width="1.2"/>
+      <path d="M96 202 Q88 218 82 228 L90 226 L99 204Z M104 202 Q112 218 118 228 L110 226 L101 204Z" fill="#e8a800"/>
+      <circle cx="100" cy="200" r="5" fill="#d99a00"/>
+    </symbol>
+  </svg>
+
+  <!-- ========== Ambient layers ========== -->
+  <div id="bg-hearts" aria-hidden="true"></div>
+  <div id="fx-layer" aria-hidden="true"></div>
+  <div id="bloom-layer" aria-hidden="true"></div>
+
+  <audio id="bgm" loop preload="auto"></audio>
+  <button id="music-btn" class="music-btn" aria-label="Toggle music" hidden>
+    <span class="bars"><i></i><i></i><i></i><i></i></span>
+  </button>
+
+  <!-- ========== 1. INTRO: envelope ========== -->
+  <section id="intro" class="scene active">
+    <div class="inner intro-inner">
+      <h1 class="script-title" id="intro-title">Happy Anniversary, Love !</h1>
+
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the envelope">
+        <img class="env-peek" src="assets/gifs/heart-jump.gif" alt="" aria-hidden="true" />
+        <div class="env-back"></div>
+        <div class="env-letter">
+          <span class="env-letter-text">For you<br />Kristine Kaye Pitallano Lim</span>
+          <span class="env-letter-heart">♥</span>
+        </div>
+        <div class="env-pocket"></div>
+        <div class="env-flap"></div>
+        <div class="seal" id="seal">
+          <svg viewBox="0 0 120 120">
+            <path id="seal-blob" fill="url(#gold)" stroke="#b48d4a" stroke-width="1"/>
+            <circle cx="60" cy="60" r="37" fill="url(#gold2)" stroke="rgba(150,110,50,.45)" stroke-width="2.5"/>
+            <g fill="rgba(160,120,55,.6)" stroke="rgba(130,95,40,.6)" stroke-width=".8">
+              <path d="M44 84 Q58 62 78 38" fill="none" stroke-width="2.2"/>
+              <ellipse cx="50" cy="70" rx="4" ry="9" transform="rotate(-40 50 70)"/>
+              <ellipse cx="60" cy="74" rx="4" ry="9" transform="rotate(50 60 74)"/>
+              <ellipse cx="56" cy="60" rx="4" ry="9" transform="rotate(-35 56 60)"/>
+              <ellipse cx="67" cy="62" rx="4" ry="9" transform="rotate(55 67 62)"/>
+              <ellipse cx="63" cy="49" rx="3.6" ry="8" transform="rotate(-30 63 49)"/>
+              <ellipse cx="74" cy="51" rx="3.6" ry="8" transform="rotate(60 74 51)"/>
+              <ellipse cx="76" cy="38" rx="3" ry="7" transform="rotate(25 76 38)"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <p class="hint" id="intro-hint">tap the envelope for the surprise...</p>
+    </div>
+  </section>
+
+  <!-- ========== 2. GIFTS menu ========== -->
+  <section id="gifts" class="scene">
+    <div class="inner gifts-inner">
+      <h2 class="brush-title" data-pop>Gifts for you</h2>
+      <div class="gift-grid">
+        <button class="gift" data-go="message" data-pop style="--i:1">
+          <span class="gift-icon">
+            <svg viewBox="0 0 200 160">
+              <g transform="rotate(-14 100 80)">
+                <rect x="22" y="32" width="156" height="102" rx="9" fill="url(#envCream)" stroke="#c6b19c" stroke-width="2"/>
+                <path d="M25 37 L100 92 L175 37" fill="none" stroke="#bda48d" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M26 130 L82 84 M174 130 L118 84" stroke="#d3c0ac" stroke-width="2"/>
+                <path d="M40 50 q30 10 20 40 M150 110 q-20 -10 -10 -30" stroke="rgba(170,140,110,.25)" stroke-width="6" fill="none"/>
+                <circle cx="100" cy="90" r="17" fill="#d99a17"/>
+                <circle cx="100" cy="90" r="11.5" fill="#ecb22c" stroke="#a8700a" stroke-width="1.5"/>
+                <path d="M95 89 q2 -6 6 -4 q4 3 0 7 q-4 3 -6 -1" fill="none" stroke="#8f5c06" stroke-width="1.6"/>
+              </g>
+            </svg>
+          </span>
+          <span class="gift-label">Message</span>
+        </button>
+
+        <button class="gift" data-go="memories" data-pop style="--i:2">
+          <span class="gift-icon">
+            <svg viewBox="0 0 200 210">
+              <circle cx="58" cy="42" r="22" fill="#b5773f"/><circle cx="58" cy="42" r="12" fill="#e6b382"/>
+              <circle cx="142" cy="42" r="22" fill="#b5773f"/><circle cx="142" cy="42" r="12" fill="#e6b382"/>
+              <ellipse cx="100" cy="150" rx="50" ry="42" fill="#c08550"/>
+              <path d="M100 178 C58 152 44 126 62 108 C77 94 95 100 100 115 C105 100 123 94 138 108 C156 126 142 152 100 178Z" fill="#ffd84d" stroke="#e5a91a" stroke-width="2.5"/>
+              <path d="M70 112 q8 -8 16 -2" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" opacity=".6"/>
+              <ellipse cx="60" cy="132" rx="17" ry="23" fill="#c08550" transform="rotate(-18 60 132)"/>
+              <ellipse cx="140" cy="132" rx="17" ry="23" fill="#c08550" transform="rotate(18 140 132)"/>
+              <circle cx="70" cy="186" r="20" fill="#c08550"/><circle cx="70" cy="188" r="11" fill="#f2c9a0"/>
+              <circle cx="130" cy="186" r="20" fill="#c08550"/><circle cx="130" cy="188" r="11" fill="#f2c9a0"/>
+              <g fill="#f6a5b3"><circle cx="64" cy="181" r="3"/><circle cx="71" cy="178" r="3"/><circle cx="78" cy="181" r="3"/>
+                <circle cx="124" cy="181" r="3"/><circle cx="131" cy="178" r="3"/><circle cx="138" cy="181" r="3"/></g>
+              <ellipse cx="100" cy="76" rx="54" ry="46" fill="#c58a55"/>
+              <ellipse cx="100" cy="94" rx="21" ry="15" fill="#efc79c"/>
+              <circle cx="80" cy="73" r="5" fill="#2b1a10"/><circle cx="120" cy="73" r="5" fill="#2b1a10"/>
+              <circle cx="81.5" cy="71.5" r="1.6" fill="#fff"/><circle cx="121.5" cy="71.5" r="1.6" fill="#fff"/>
+              <ellipse cx="100" cy="87" rx="6.5" ry="5" fill="#3a2214"/>
+              <path d="M94 95 Q100 101 106 95" stroke="#3a2214" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <ellipse cx="70" cy="89" rx="9" ry="5.5" fill="#f2909f" opacity=".75"/>
+              <ellipse cx="130" cy="89" rx="9" ry="5.5" fill="#f2909f" opacity=".75"/>
+            </svg>
+          </span>
+          <span class="gift-label">Memories</span>
+        </button>
+
+        <button class="gift" data-go="flowers" data-pop style="--i:3">
+          <span class="gift-icon"><svg viewBox="0 0 200 250"><use href="#peony-bouquet"/></svg></span>
+          <span class="gift-label">Flowers</span>
+        </button>
+      </div>
+      <p class="hint small" data-pop style="--i:4">choose a gift ♥</p>
+    </div>
+    <img class="walker" src="assets/gifs/drag.gif" alt="" aria-hidden="true" />
+  </section>
+
+  <!-- ========== 3. MESSAGE letter ========== -->
+  <section id="message" class="scene">
+    <div class="inner letter-wrap">
+      <div class="letter-stage" data-pop>
+        <div class="gingham"></div>
+        <div class="paper">
+          <div class="paper-text" id="letter-text"></div>
+        </div>
+        <svg class="deco star-a" viewBox="0 0 56 56"><use href="#star"/></svg>
+        <svg class="deco star-b" viewBox="0 0 56 56"><use href="#star"/></svg>
+        <svg class="deco star-c" viewBox="0 0 56 56"><use href="#star"/></svg>
+
+        <!-- spring bouquet -->
+        <svg class="deco spring-bouquet" viewBox="0 0 220 240">
+          <g stroke="#5c9c4a" stroke-width="3.2" fill="none" stroke-linecap="round">
+            <path d="M110 230 L110 180"/><path d="M110 185 Q80 130 50 100"/><path d="M110 185 Q95 120 92 60"/>
+            <path d="M110 185 Q125 110 140 55"/><path d="M110 185 Q140 140 175 110"/><path d="M110 185 Q70 160 30 150"/>
+            <path d="M110 185 Q160 170 195 160"/><path d="M110 185 Q112 120 118 90"/>
+          </g>
+          <g stroke="#9aa79a" stroke-width="2" fill="none"><path d="M110 185 Q60 80 40 30"/><path d="M110 185 Q150 90 185 40"/></g>
+          <g fill="#e9e6df"><ellipse cx="46" cy="44" rx="4" ry="6"/><ellipse cx="54" cy="62" rx="4" ry="6"/><ellipse cx="180" cy="52" rx="4" ry="6"/><ellipse cx="170" cy="70" rx="4" ry="6"/></g>
+          <use href="#leaf" x="60" y="140" width="36" height="36" style="color:#6aac55"/>
+          <use href="#leaf" x="125" y="135" width="36" height="36" style="color:#58993f"/>
+          <use href="#peony" x="22" y="74" width="54" height="54" style="color:#f7d24a"/>
+          <use href="#peony" x="116" y="24" width="56" height="56" style="color:#fbe39a"/>
+          <use href="#peony-bud" x="160" y="90" width="36" height="36" style="color:#f4c025"/>
+          <use href="#daisy" x="68" y="35" width="52" height="52" style="color:#fffdf7"/>
+          <use href="#peony" x="90" y="66" width="56" height="56" style="color:#f6c93a"/>
+          <use href="#blossom" x="10" y="128" width="40" height="40" style="color:#f7d64e"/>
+          <use href="#blossom" x="168" y="138" width="38" height="38" style="color:#fff4cf"/>
+          <use href="#blossom" x="140" y="160" width="26" height="26" style="color:#f9b84a"/>
+          <use href="#blossom" x="58" y="168" width="26" height="26" style="color:#fde9a8"/>
+          <path d="M95 190 Q110 182 125 190 L122 212 Q110 206 98 212Z" fill="#e6c27a"/>
+          <path d="M98 198 Q110 204 122 198" stroke="#b58a3c" stroke-width="2" fill="none"/>
+        </svg>
+
+        <button class="vinyl" data-go="song" aria-label="Open your song">
+          <span class="vinyl-disc"><span class="vinyl-label"></span></span>
+          <span class="vinyl-text">Click Here</span>
+        </button>
+      </div>
+      <button class="back-btn" data-go="gifts" data-pop style="--i:2">← back to gifts</button>
+    </div>
+  </section>
+
+  <!-- ========== 4. SONG ========== -->
+  <section id="song" class="scene">
+    <div class="inner song-wrap">
+      <h2 class="brush-title" data-pop>Song for you</h2>
+      <div class="song-stage" data-pop style="--i:1">
+        <svg class="deco s-star1" viewBox="0 0 56 56"><use href="#star"/></svg>
+        <svg class="deco s-star2" viewBox="0 0 56 56"><use href="#star"/></svg>
+        <div class="video-frame" id="video-frame"></div>
+        <svg class="deco s-flowers" viewBox="0 0 160 120">
+          <use href="#leaf" x="70" y="56" width="40" height="40" style="color:#5a9c45"/>
+          <use href="#peony" x="0" y="20" width="80" height="80" style="color:#fff1c4"/>
+          <use href="#peony" x="58" y="44" width="66" height="66" style="color:#f7d24a"/>
+        </svg>
+        <div class="stamps">
+          <svg class="deco s-bow" viewBox="0 0 120 90">
+            <path d="M60 40 Q20 0 8 22 Q0 45 60 44Z" fill="url(#ging)" stroke="#b07a08" stroke-width="2"/>
+            <path d="M60 40 Q100 0 112 22 Q120 45 60 44Z" fill="url(#ging)" stroke="#b07a08" stroke-width="2"/>
+            <path d="M56 44 Q40 70 30 88 L44 84 L58 46Z" fill="url(#ging)" stroke="#b07a08" stroke-width="2"/>
+            <path d="M64 44 Q80 70 90 88 L76 84 L62 46Z" fill="url(#ging)" stroke="#b07a08" stroke-width="2"/>
+            <rect x="52" y="34" width="16" height="16" rx="5" fill="url(#ging)" stroke="#b07a08" stroke-width="2"/>
+          </svg>
+          <figure class="stamp st1"><img alt="Us" data-photo="song0"/></figure>
+          <figure class="stamp st2"><img alt="Us" data-photo="song1"/></figure>
+        </div>
+      </div>
+      <button class="back-btn" data-go="message" data-pop style="--i:2">← back to the letter</button>
+    </div>
+  </section>
+
+  <!-- ========== 5. MEMORIES ========== -->
+  <section id="memories" class="scene">
+    <div class="inner mem-wrap">
+      <img class="mem-gif" src="assets/gifs/love.gif" alt="" aria-hidden="true" data-pop />
+      <h2 class="brush-title" data-pop>Our Memories</h2>
+      <p class="hint small" data-pop style="--i:1">every moment with you is my favorite</p>
+      <div class="polaroids" id="polaroids"></div>
+      <button class="back-btn" data-go="gifts" data-pop style="--i:3">← back to gifts</button>
+    </div>
+  </section>
+
+  <!-- ========== 6. FLOWERS ========== -->
+  <section id="flowers" class="scene">
+    <div class="inner flowers-inner">
+      <h2 class="brush-title" data-pop>Peonies for you</h2>
+      <button class="big-bouquet" id="big-bouquet" data-pop style="--i:1" aria-label="Tap the bouquet">
+        <svg viewBox="0 0 200 250"><use href="#peony-bouquet"/></svg>
+      </button>
+      <p class="hint" data-pop style="--i:2" id="flower-hint">tap the bouquet ✿</p>
+      <button class="back-btn" data-go="gifts" data-pop style="--i:3">← back to gifts</button>
+    </div>
+
+    <div class="reveal" id="reveal" hidden>
+      <figure class="reveal-frame">
+        <img class="reveal-photo" alt="Us" data-photo="reveal" />
+      </figure>
+      <div class="reveal-text">
+        <h2 class="reveal-big" id="reveal-big">I LOVE YOU VERY MUCH BUBU!!!</h2>
+      </div>
+      <div class="reveal-actions">
+        <button class="pill" id="again-btn">✿ again</button>
+        <button class="pill" data-go="gifts">back to gifts</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <figure class="lightbox-card">
+      <img id="lightbox-img" alt="" />
+      <figcaption id="lightbox-cap"></figcaption>
+    </figure>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
